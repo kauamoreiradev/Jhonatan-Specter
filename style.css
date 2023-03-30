@@ -1,0 +1,429 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.gridContent {
+  min-height: 100vh;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-auto-rows: minmax(220fpx 100%);
+}
+.header {
+  width: 100%;
+  min-height: 40px;
+  padding: 50px 160px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.title-logo {
+  font-family: Prata;
+  font-size: 18px;
+  color: #edececb5;
+}
+.itens {
+  font-family: Inter;
+  display: flex;
+  gap: 40px;
+}
+.itens-nav {
+  font-size: 18px;
+  color: #808080;
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.itens-nav:hover {
+  border-bottom: 2px solid #808080;
+}
+.btn-nav {
+  font-family: Prata;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  background-color: #fbe850;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+#btn-mobile {
+  display: none;
+}
+.btn-get {
+  font-family: Prata;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  background-color: #fbe850;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: none;
+}
+.mainContent {
+  width: 100%;
+  min-height: 300px;
+  display: grid;
+  background-color: #ff0000;
+}
+.gridTextOne {
+  min-height: 250px;
+  padding: 30px 160px;
+  grid-column: 1/3;
+}
+.titleMain {
+  color: #e6e3e3d5;
+  font-family: Prata;
+  font-size: 40px;
+  width: 70%;
+}
+.descriptionMain {
+  font-family: Inter;
+  color: #808080;
+  font-size: 15px;
+  width: 80%;
+}
+.gridLogos {
+  min-height: 30px;
+  padding: 30px 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 1/3;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.boxImg {
+  min-height: 550px;
+  padding: 30px 160px;
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  grid-column: 1/3;
+}
+.imageBox {
+  width: 100%;
+  height: auto;
+}
+.boxImgOne {
+  width: 520px;
+  height: 380px;
+}
+.boxImgTwo {
+  width: 520px;
+  height: 380px;
+}
+.titleBox {
+  color: #e6e3e3d5;
+  font-family: Prata;
+  padding: 6px;
+}
+.descriptionBox {
+  color: #808080;
+  font-family: Inter;
+  font-size: 15px;
+  padding: 6px;
+}
+.rangeContent {
+  min-height: 300px;
+  padding: 50px 160px;
+  background-color: #2e3038;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  grid-column: 1/3;
+}
+.titleRange {
+  font-family: Prata;
+  font-size: 35px;
+  color: #e6e3e3e8;
+  padding: 10px;
+}
+.descriptionRange {
+  font-family: Inter;
+  color: #808080;
+}
+.textOne {
+  width: 100%;
+}
+.textTwo {
+  width: 100%;
+}
+.gridContact {
+  min-height: 300px;
+  padding: 50px 160px;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+}
+.titleCont {
+  font-family: Prata;
+  color: #e6e3e3e8;
+  font-size: 35px;
+  width: 90%;
+}
+.descriptionContact {
+  font-family: Inter;
+  width: 45%;
+  font-size: 18px;
+  color: #808080;
+  padding: 10px 0px;
+}
+.contactBtn {
+  font-family: Prata;
+  height: 50px;
+  width: 15%;
+  font-size: 18px;
+  background-color: #fbe850;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 30px 160px;
+  background-color: #2e3038;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.img {
+  display: flex;
+}
+.logoNameFooter {
+  font-family: Prata;
+  font-size: 18px;
+  color: #edececb5;
+}
+.socialIcons {
+  display: flex;
+  padding: 0px 10px;
+}
+@media (max-width: 980px) {
+  #btn-mobile {
+    display: block;
+  }
+  .button {
+    display: none;
+  }
+  .itens {
+    display: none;
+  }
+  #menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 100px;
+    right: 0px;
+    z-index: 1000;
+    background-color: #060606;
+  }
+  .btn-get {
+    position: relative;
+    display: none;
+    width: 30%;
+    left: 35%;
+  }
+  #nav.active #menu {
+    display: flex;
+    height: calc(100vh - 100px);
+    flex-direction: column;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #nav.active .btn-get {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    color: #edececb5;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #edececb5;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    padding: 30px;
+  }
+  .gridTextOne {
+    padding: 30px;
+  }
+  .titleMain {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 350%;
+  }
+  .descriptionMain {
+    width: 100%;
+    font-size: 120%;
+  }
+
+  .gridLogos {
+    padding: 80px;
+  }
+  .logosImg {
+    width: 25%;
+    height: 30px;
+    align-items: center;
+  }
+  .logosImg2 {
+    padding: 8px;
+    width: 30%;
+    height: 40px;
+    align-items: center;
+  }
+  .boxImg {
+    padding: 30px;
+  }
+  .boxImgOne {
+    width: 100%;
+    height: auto;
+  }
+  .boxImgTwo {
+    width: 100%;
+    height: auto;
+  }
+  .rangeContent {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titleRange {
+    width: 100%;
+    font-size: 40px;
+  }
+  .descriptionRange {
+    text-align: center;
+    font-size: 18px;
+  }
+  .gridContact {
+    padding: 30px;
+  }
+  .descriptionContact {
+    width: 68%;
+  }
+  .contactBtn {
+    width: 30%;
+  }
+  .footer {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 490px) {
+  #menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 70px;
+    right: 0px;
+    z-index: 1000;
+    background-color: #060606;
+  }
+  .header {
+    padding: 15px;
+  }
+  .gridTextOne {
+    padding: 15px;
+  }
+  .titleMain {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 200%;
+  }
+  .descriptionMain {
+    width: 100%;
+    font-size: 100%;
+    display: flex;
+    text-align: center;
+  }
+
+  .gridLogos {
+    padding: 50px;
+  }
+  .logosImg {
+    width: 35%;
+    height: 20px;
+    align-items: center;
+  }
+  .boxImg {
+    padding: 15px;
+  }
+  .boxImgOne {
+    width: 100%;
+    height: auto;
+  }
+  .boxImgTwo {
+    width: 100%;
+    height: auto;
+  }
+  .rangeContent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titleRange {
+    width: 100%;
+    font-size: 20px;
+  }
+  .descriptionRange {
+    text-align: center;
+    font-size: 13px;
+  }
+  .gridContact {
+    padding: 20px;
+  }
+  .titleCont {
+    font-size: 23px;
+  }
+  .descriptionContact {
+    width: 68%;
+    font-size: 15px;
+  }
+  .contactBtn {
+    width: 45%;
+  }
+  .logoNameFooter {
+    font-size: 16px;
+  }
+  .footer {
+    padding: 15px;
+  }
+}
